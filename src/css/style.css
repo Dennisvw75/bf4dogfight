@@ -7,3 +7,76 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: 'Muli', sans-serif; }
+
+.main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  color: #ffc107;
+  background: #000000;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#434343), to(#000000));
+  background: linear-gradient(to bottom, #434343, #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  .main-header__logo {
+    margin-left: 1.5rem;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+  .main-header .main-nav__item {
+    display: inline-block;
+    margin: 0 1.5rem 0 1.5rem; }
+    .main-header .main-nav__item a {
+      list-style: none;
+      text-decoration: none;
+      font-weight: bold;
+      color: #ffc107;
+      text-transform: uppercase;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+    .main-header .main-nav__item a:hover {
+      color: #fff;
+      border-bottom: 1px solid #ffc107; }
+
+@media (max-width: 768px) {
+  .main-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap; }
+  .main-header__logo {
+    margin: 0;
+    color: #ffc107; }
+  .main-nav__item {
+    margin: 0;
+    padding: 0.5rem 0; } }
+
+@media (max-width: 550px) {
+  .main-header {
+    height: 13.5rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .main-header__logo {
+    margin: 0.5rem 0 0.5rem 0; }
+  .main-nav__listgroup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
