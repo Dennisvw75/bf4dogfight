@@ -398,12 +398,36 @@ html {
   .dogfight-tips__title {
     color: #fff;
     padding-top: 1rem; }
+    @media (max-width: 690px) {
+      .dogfight-tips__title {
+        font-size: 1.3rem; } }
+    @media (max-width: 560px) {
+      .dogfight-tips__title {
+        font-size: 1.2rem; } }
+    @media (max-width: 470px) {
+      .dogfight-tips__title {
+        font-size: 1rem; } }
   .dogfight-tips__title2 {
     color: #fff;
     padding-top: 1rem; }
+    @media (max-width: 690px) {
+      .dogfight-tips__title2 {
+        font-size: 1.1rem; } }
+    @media (max-width: 560px) {
+      .dogfight-tips__title2 {
+        font-size: 0.9rem; } }
+    @media (max-width: 470px) {
+      .dogfight-tips__title2 {
+        font-size: 0.8rem; } }
   .dogfight-tips__par {
     color: #fff;
     padding-top: 1rem; }
+    @media (max-width: 690px) {
+      .dogfight-tips__par {
+        font-size: 0.9rem; } }
+    @media (max-width: 470px) {
+      .dogfight-tips__par {
+        font-size: 0.8rem; } }
   .dogfight-tips__link {
     background: #434343;
     color: #ffc107;
@@ -421,3 +445,91 @@ iframe {
   padding-top: 2rem;
   padding-bottom: 1rem;
   width: 100%; }
+  @media (max-width: 470px) {
+    iframe {
+      height: 350px; } }
+
+.container-tourney {
+  background: #4da0b0;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left bottom, left top, from(#d39d38), to(#4da0b0));
+  background: linear-gradient(to top, #d39d38, #4da0b0);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.section-tourney {
+  width: calc(100% - 5rem);
+  max-width: 50rem;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .section-tourney__img {
+    height: 38.625rem;
+    width: 100%;
+    padding-top: 2rem;
+    border-radius: 15px;
+    opacity: 0.7; }
+    @media (max-width: 1000px) {
+      .section-tourney__img {
+        height: 37.5rem; } }
+    @media (max-width: 840px) {
+      .section-tourney__img {
+        height: 31.25rem; } }
+    @media (max-width: 700px) {
+      .section-tourney__img {
+        height: 26rem; } }
+    @media (max-width: 580px) {
+      .section-tourney__img {
+        height: 20rem; } }
+    @media (max-width: 440px) {
+      .section-tourney__img {
+        height: 16rem; } }
+  .section-tourney__title {
+    padding-top: 1rem;
+    text-shadow: 1px 1px 0 #f9f572; }
+    @media (max-width: 440px) {
+      .section-tourney__title {
+        font-size: 1.2rem; } }
+  .section-tourney__title2 {
+    padding: 1rem 0;
+    text-shadow: 1px 1px 0 #f9f572; }
+    @media (max-width: 390px) {
+      .section-tourney__title2 {
+        font-size: 1rem; } }
+  .section-tourney__text {
+    text-align: justify;
+    color: black;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    padding: 1rem 0; }
+    @media (max-width: 768px) {
+      .section-tourney__text {
+        font-size: 1.1rem;
+        line-height: 1.3;
+        letter-spacing: 0.9; } }
+    @media (max-width: 450px) {
+      .section-tourney__text {
+        font-size: 1rem; } }
+  .section-tourney__winner {
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 0 #f9f572; }
+    @media (max-width: 870px) {
+      .section-tourney__winner {
+        font-size: 1.2rem; } }
+  .section-tourney__link {
+    background: #434343;
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    -webkit-transform: all 0.4s;
+    transform: all 0.4s; }
+    .section-tourney__link:hover {
+      color: #fff;
+      border-bottom: 1px solid #ffc107; }
