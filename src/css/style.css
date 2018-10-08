@@ -291,7 +291,8 @@ html {
   padding: 1em 2em;
   color: #fff;
   border: 0;
-  width: 100%; }
+  width: 100%;
+  cursor: pointer; }
   @media (max-width: 520px) {
     .button {
       font-size: 0.8rem; } }
@@ -380,3 +381,43 @@ html {
     opacity: 0; }
   to {
     opacity: 1; } }
+
+.tips {
+  background: #000000;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left bottom, left top, from(#434343), to(#000000));
+  background: linear-gradient(to top, #434343, #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.dogfight-tips {
+  width: calc(100% - 10rem);
+  max-width: 50rem;
+  margin: 0 auto;
+  text-align: center; }
+  .dogfight-tips__title {
+    color: #fff;
+    padding-top: 1rem; }
+  .dogfight-tips__title2 {
+    color: #fff;
+    padding-top: 1rem; }
+  .dogfight-tips__par {
+    color: #fff;
+    padding-top: 1rem; }
+  .dogfight-tips__link {
+    background: #434343;
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    -webkit-transform: all 0.4s;
+    transform: all 0.4s; }
+    .dogfight-tips__link:hover {
+      color: #fff;
+      border-bottom: 1px solid #ffc107; }
+
+iframe {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  width: 100%; }
