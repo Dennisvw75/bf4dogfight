@@ -11,6 +11,8 @@ html {
   font-family: 'Muli', sans-serif;
 }
 
+///// GLOBAL STYLES//////////
+
 //////////////////////////////////
 // Header and Navigation styles //
 //////////////////////////////////
@@ -178,7 +180,7 @@ html {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 5px;
+  grid-gap: 8px;
   text-align: center;
 
   @media (max-width: 690px) {
@@ -303,6 +305,7 @@ html {
   // border: 1px solid black;
   text-align: justify;
   padding: 0 2rem;
+  height: 100%;
 
   &__title {
     padding-top: 1rem;
@@ -715,4 +718,84 @@ iframe {
       border-bottom: 1px solid #ffc107;
     }
   }
+}
+/////////////////////
+// BFV landing page
+/////////////////////
+.section-landing {
+  position: relative;
+  background-image: url('../img/BF5-min.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+  &__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 74%;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding-top: 200px;
+  }
+  &__par {
+    font-size: 1.5rem;
+    color: rgb(255, 193, 7);
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+  &__title {
+    font-size: 1.5rem;
+    color: rgb(255, 193, 7);
+    padding-top: 1rem;
+
+    @media (max-width: 400px) {
+      display: none;
+    }
+  }
+}
+
+.countdown {
+  font-size: 2.125rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  @media (max-width: 650px) {
+    font-size: 1.875;
+    flex-direction: column;
+  }
+}
+
+.countdown div {
+  padding: 1.25rem;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin: 5px;
+  opacity: 0.7;
+  background: #000;
+
+  @media (max-width: 650px) {
+    display: none;
+  }
+}
+
+.countdown div:first-child {
+  background: rgb(255, 193, 7);
+
+  @media (max-width: 650px) {
+    display: block;
+    width: 80%;
+    padding: 10px;
+  }
+}
+
+.countdown span {
+  display: block;
+  font-size: 1.5625;
 }
