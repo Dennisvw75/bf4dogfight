@@ -22,6 +22,78 @@ html {
     color: #fff;
     border-bottom: 1px solid #ffc107; }
 
+.main-footer {
+  height: 4rem;
+  background: #283048;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#859398), to(#283048));
+  background: linear-gradient(to bottom, #859398, #283048);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffc107;
+  font-weight: bold;
+  padding-top: 0.5rem; }
+  @media (max-width: 690px) {
+    .main-footer {
+      font-size: 0.9rem; } }
+  @media (max-width: 470px) {
+    .main-footer {
+      font-size: 0.8rem; } }
+  .main-footer__text {
+    padding-bottom: 0.5rem; }
+  .main-footer__btn {
+    background: #434343;
+    color: #ffc107;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+    .main-footer__btn:hover {
+      color: #fff;
+      border-bottom: 1px solid #ffc107; }
+
+.section-jumbotron {
+  background: #283048;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#859398), to(#283048));
+  background: linear-gradient(to bottom, #859398, #283048);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: grid;
+  grid-template-rows: 1fr;
+  text-align: center;
+  border-bottom: 1px solid #434343;
+  color: #bdbfc1; }
+  .section-jumbotron__title {
+    padding: 0.8rem 0 0.5rem 0;
+    text-shadow: 1px 1px 0 #f9f572; }
+    @media (max-width: 690px) {
+      .section-jumbotron__title {
+        font-size: 1.3rem; } }
+    @media (max-width: 590px) {
+      .section-jumbotron__title {
+        font-size: 1.2rem; } }
+    @media (max-width: 470px) {
+      .section-jumbotron__title {
+        font-size: 0.9rem; } }
+  .section-jumbotron__text {
+    font-size: 1.4rem;
+    padding-bottom: 0.5rem;
+    text-shadow: 1px 1px 0 #f9f572; }
+    @media (max-width: 690px) {
+      .section-jumbotron__text {
+        font-size: 1.3rem; } }
+    @media (max-width: 590px) {
+      .section-jumbotron__text {
+        font-size: 1.2rem; } }
+    @media (max-width: 470px) {
+      .section-jumbotron__text {
+        font-size: 0.9rem; } }
+
 .main-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,45 +168,6 @@ html {
         color: #fff;
         border-bottom: 1px solid #ffc107; }
 
-.section-jumbotron {
-  background: #283048;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, left bottom, from(#859398), to(#283048));
-  background: linear-gradient(to bottom, #859398, #283048);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  text-align: center;
-  border-bottom: 1px solid #434343;
-  color: #bdbfc1; }
-  .section-jumbotron__title {
-    padding: 0.8rem 0 0.5rem 0;
-    text-shadow: 1px 1px 0 #f9f572; }
-    @media (max-width: 690px) {
-      .section-jumbotron__title {
-        font-size: 1.2rem; } }
-    @media (max-width: 560px) {
-      .section-jumbotron__title {
-        font-size: 1rem;
-        padding: 0.4rem; } }
-    @media (max-width: 470px) {
-      .section-jumbotron__title {
-        font-size: 0.8rem; } }
-  .section-jumbotron__text {
-    font-size: 1.4rem;
-    padding-bottom: 0.5rem;
-    text-shadow: 1px 1px 0 #f9f572; }
-    @media (max-width: 690px) {
-      .section-jumbotron__text {
-        font-size: 1.2rem;
-        padding: 0.5rem 0 0.5rem 0; } }
-    @media (max-width: 560px) {
-      .section-jumbotron__text {
-        font-size: 1rem;
-        padding: 0.4rem; } }
-    @media (max-width: 470px) {
-      .section-jumbotron__text {
-        font-size: 0.8rem; } }
-
 .section-silkroad__img {
   height: 80%;
   width: 100%;
@@ -180,40 +213,6 @@ html {
       .section-card__text {
         padding-bottom: 1.8rem; } }
 
-.main-footer {
-  height: 4rem;
-  background: #283048;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, left bottom, from(#859398), to(#283048));
-  background: linear-gradient(to bottom, #859398, #283048);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffc107;
-  font-weight: bold;
-  padding-top: 0.5rem; }
-  @media (max-width: 690px) {
-    .main-footer {
-      font-size: 0.9rem; } }
-  @media (max-width: 470px) {
-    .main-footer {
-      font-size: 0.8rem; } }
-  .main-footer__text {
-    padding-bottom: 0.5rem; }
-  .main-footer__btn {
-    background: #434343;
-    color: #ffc107;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 5px;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out; }
-    .main-footer__btn:hover {
-      color: #fff;
-      border-bottom: 1px solid #ffc107; }
-
 .section-aboutme {
   background: #f2994a;
   /* fallback for old browsers */
@@ -224,7 +223,8 @@ html {
   display: grid;
   grid-template-columns: 1fr;
   text-align: justify;
-  padding: 0 2rem; }
+  padding: 0 2rem;
+  min-height: calc(100vh - 8rem); }
   .section-aboutme__title {
     padding-top: 1rem;
     text-align: center;
