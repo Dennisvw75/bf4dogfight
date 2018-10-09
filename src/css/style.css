@@ -8,6 +8,20 @@ html {
   box-sizing: border-box;
   font-family: 'Muli', sans-serif; }
 
+.btn {
+  background: #434343;
+  color: #ffc107;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+  .btn:hover {
+    color: #fff;
+    border-bottom: 1px solid #ffc107; }
+
 .main-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -31,56 +45,56 @@ html {
   background: -webkit-gradient(linear, left top, left bottom, from(#859398), to(#283048));
   background: linear-gradient(to bottom, #859398, #283048);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  @media (max-width: 768px) {
+    .main-header {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap; } }
+  @media (max-width: 550px) {
+    .main-header {
+      height: 13.5rem;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
   .main-header__logo {
     margin-left: 1.5rem;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
     text-transform: uppercase; }
+    @media (max-width: 768px) {
+      .main-header__logo {
+        margin: 0; } }
+    @media (max-width: 550px) {
+      .main-header__logo {
+        margin: 0.5rem 0 0.5rem 0; } }
+  @media (max-width: 550px) {
+    .main-header .main-nav__listgroup {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
   .main-header .main-nav__item {
     display: inline-block;
     margin: 0 1.5rem 0 1.5rem; }
+    @media (max-width: 768px) {
+      .main-header .main-nav__item {
+        padding: 0.5rem 0; } }
     .main-header .main-nav__item a {
       list-style: none;
       text-decoration: none;
       font-weight: bold;
       color: #f9f572;
       text-transform: uppercase;
-      -webkit-transition: all 0.3s;
-      transition: all 0.3s; }
-    .main-header .main-nav__item a:hover {
-      color: #fff;
-      border-bottom: 1px solid #ffc107; }
-
-@media (max-width: 768px) {
-  .main-header {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: column nowrap;
-    flex-flow: column nowrap; }
-  .main-header__logo {
-    margin: 0;
-    color: #ffc107; }
-  .main-nav__item {
-    margin: 0;
-    padding: 0.5rem 0; } }
-
-@media (max-width: 550px) {
-  .main-header {
-    height: 13.5rem;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
-  .main-header__logo {
-    margin: 0.5rem 0 0.5rem 0; }
-  .main-nav__listgroup {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; } }
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out; }
+      .main-header .main-nav__item a:hover {
+        color: #fff;
+        border-bottom: 1px solid #ffc107; }
 
 .section-jumbotron {
   background: #283048;
@@ -122,7 +136,7 @@ html {
         font-size: 0.8rem; } }
 
 .section-silkroad__img {
-  min-height: 80%;
+  height: 80%;
   width: 100%;
   background-repeat: no-repeat;
   background-size: auto;
@@ -165,19 +179,6 @@ html {
     @media (max-width: 690px) {
       .section-card__text {
         padding-bottom: 1.8rem; } }
-  .section-card__btn {
-    background: #434343;
-    color: #ffc107;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    -webkit-transform: all 0.4s;
-    transform: all 0.4s; }
-    .section-card__btn:hover {
-      color: #fff;
-      border-bottom: 1px solid #ffc107; }
 
 .main-footer {
   height: 4rem;
@@ -207,8 +208,8 @@ html {
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 5px;
-    -webkit-transform: all 0.4s;
-    transform: all 0.4s; }
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
     .main-footer__btn:hover {
       color: #fff;
       border-bottom: 1px solid #ffc107; }
@@ -223,8 +224,7 @@ html {
   display: grid;
   grid-template-columns: 1fr;
   text-align: justify;
-  padding: 0 2rem;
-  height: 100%; }
+  padding: 0 2rem; }
   .section-aboutme__title {
     padding-top: 1rem;
     text-align: center;
@@ -239,18 +239,6 @@ html {
     @media (max-width: 420px) {
       .section-aboutme__text {
         font-size: 0.9rem; } }
-  .section-aboutme__btn {
-    background: #434343;
-    color: #ffc107;
-    text-decoration: none;
-    font-weight: bold;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    -webkit-transform: all 0.4s;
-    transform: all 0.4s; }
-    .section-aboutme__btn:hover {
-      color: #fff;
-      border-bottom: 1px solid #ffc107; }
   .section-aboutme__btnsec {
     text-align: center;
     display: block;
@@ -268,8 +256,8 @@ html {
     text-shadow: 1px 1px 0 #f9f572;
     -webkit-box-shadow: 2px 2px 5px 5px #283048;
     box-shadow: 2px 2px 5px 5px #283048;
-    -webkit-transform: all 0.5s;
-    transform: all 0.5s; }
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out; }
     .section-aboutme__btnsec:hover {
       color: #fff;
       background: #283048;
@@ -429,18 +417,6 @@ html {
     @media (max-width: 470px) {
       .dogfight-tips__par {
         font-size: 0.8rem; } }
-  .dogfight-tips__link {
-    background: #434343;
-    color: #ffc107;
-    text-decoration: none;
-    font-weight: bold;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    -webkit-transform: all 0.4s;
-    transform: all 0.4s; }
-    .dogfight-tips__link:hover {
-      color: #fff;
-      border-bottom: 1px solid #ffc107; }
 
 iframe {
   padding-top: 2rem;
@@ -506,7 +482,7 @@ iframe {
     color: black;
     font-size: 1.2rem;
     line-height: 1.4;
-    letter-spacing: 1px;
+    letter-spacing: 1;
     padding: 1rem 0; }
     @media (max-width: 768px) {
       .section-tourney__text {
@@ -522,18 +498,6 @@ iframe {
     @media (max-width: 870px) {
       .section-tourney__winner {
         font-size: 1.2rem; } }
-  .section-tourney__link {
-    background: #434343;
-    color: #ffc107;
-    text-decoration: none;
-    font-weight: bold;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    -webkit-transform: all 0.4s;
-    transform: all 0.4s; }
-    .section-tourney__link:hover {
-      color: #fff;
-      border-bottom: 1px solid #ffc107; }
 
 .section-landing {
   position: relative;

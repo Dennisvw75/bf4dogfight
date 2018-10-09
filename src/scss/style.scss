@@ -13,6 +13,22 @@ html {
 
 ///// GLOBAL STYLES//////////
 
+.btn {
+  background: #434343;
+  color: #ffc107;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    color: #fff;
+    border-bottom: 1px solid #ffc107;
+  }
+}
+
 //////////////////////////////////
 // Header and Navigation styles //
 //////////////////////////////////
@@ -36,16 +52,42 @@ html {
     #283048
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+  @media (max-width: 768px) {
+    flex-flow: column nowrap;
+  }
+  @media (max-width: 550px) {
+    height: 13.5rem;
+    justify-content: center;
+  }
+
   &__logo {
     margin-left: 1.5rem;
     justify-content: flex-start;
     text-transform: uppercase;
+
+    @media (max-width: 768px) {
+      margin: 0;
+    }
+
+    @media (max-width: 550px) {
+      margin: 0.5rem 0 0.5rem 0;
+    }
   }
 
   .main-nav {
+    &__listgroup {
+      @media (max-width: 550px) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
     &__item {
       display: inline-block;
       margin: 0 1.5rem 0 1.5rem;
+
+      @media (max-width: 768px) {
+        padding: 0.5rem 0;
+      }
 
       a {
         list-style: none;
@@ -53,45 +95,16 @@ html {
         font-weight: bold;
         color: #f9f572;
         text-transform: uppercase;
-        transition: all 0.3s;
-      }
+        transition: all 0.3s ease-out;
 
-      a:hover {
-        color: #fff;
-        border-bottom: 1px solid #ffc107;
+        &:hover {
+          color: #fff;
+          border-bottom: 1px solid #ffc107;
+        }
       }
     }
   }
 }
-
-@media (max-width: 768px) {
-  .main-header {
-    flex-flow: column nowrap;
-  }
-  .main-header__logo {
-    margin: 0;
-    color: #ffc107;
-  }
-  .main-nav__item {
-    margin: 0;
-    padding: 0.5rem 0;
-  }
-}
-
-@media (max-width: 550px) {
-  .main-header {
-    height: 13.5rem;
-    justify-content: center;
-  }
-  .main-header__logo {
-    margin: 0.5rem 0 0.5rem 0;
-  }
-  .main-nav__listgroup {
-    display: flex;
-    flex-direction: column;
-  }
-}
-// TODO: implement active class for the links and nesting the media queries
 
 //////////////////////////////
 // Section Jumbotron all pages
@@ -154,7 +167,7 @@ html {
 //////////////////////////////
 .section-silkroad {
   &__img {
-    min-height: 80%;
+    height: 80%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: auto;
@@ -192,7 +205,6 @@ html {
 
   &__body {
     border: 3px solid #fff;
-    // box-shadow: 10px 10px 8px 10px #888888;
     background: #434343;
     height: 350px;
   }
@@ -215,21 +227,6 @@ html {
 
     @media (max-width: 690px) {
       padding-bottom: 1.8rem;
-    }
-  }
-  &__btn {
-    background: #434343;
-    color: #ffc107;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    transform: all 0.4s;
-
-    &:hover {
-      color: #fff;
-      border-bottom: 1px solid #ffc107;
     }
   }
 }
@@ -274,7 +271,7 @@ html {
     font-weight: bold;
     // border: 1px solid #fff;
     border-radius: 5px;
-    transform: all 0.4s;
+    transition: all 0.3s ease-out;
 
     &:hover {
       color: #fff;
@@ -305,7 +302,7 @@ html {
   // border: 1px solid black;
   text-align: justify;
   padding: 0 2rem;
-  height: 100%;
+  // height: 100vh;
 
   &__title {
     padding-top: 1rem;
@@ -323,22 +320,6 @@ html {
 
     @media (max-width: 420px) {
       font-size: 0.9rem;
-    }
-  }
-
-  &__btn {
-    background: #434343;
-    color: #ffc107;
-    text-decoration: none;
-    // text-transform: uppercase;
-    font-weight: bold;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    transform: all 0.4s;
-
-    &:hover {
-      color: #fff;
-      border-bottom: 1px solid #ffc107;
     }
   }
   &__btnsec {
@@ -363,7 +344,7 @@ html {
 
     text-shadow: $shadow-text;
     box-shadow: 2px 2px 5px 5px #283048;
-    transform: all 0.5s;
+    transition: all 0.5s ease-out;
 
     &:hover {
       color: #fff;
@@ -587,21 +568,6 @@ html {
       font-size: 0.8rem;
     }
   }
-  &__link {
-    // margin: 1rem
-    background: #434343;
-    color: #ffc107;
-    text-decoration: none;
-    font-weight: bold;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    transform: all 0.4s;
-
-    &:hover {
-      color: #fff;
-      border-bottom: 1px solid #ffc107;
-    }
-  }
 }
 
 iframe {
@@ -683,7 +649,7 @@ iframe {
     color: black;
     font-size: 1.2rem;
     line-height: 1.4;
-    letter-spacing: 1px;
+    letter-spacing: 1;
     padding: 1rem 0;
 
     @media (max-width: 768px) {
@@ -701,21 +667,6 @@ iframe {
 
     @media (max-width: 870px) {
       font-size: 1.2rem;
-    }
-  }
-  &__link {
-    // margin: 1rem
-    background: #434343;
-    color: #ffc107;
-    text-decoration: none;
-    font-weight: bold;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    transform: all 0.4s;
-
-    &:hover {
-      color: #fff;
-      border-bottom: 1px solid #ffc107;
     }
   }
 }
