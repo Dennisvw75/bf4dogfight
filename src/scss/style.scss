@@ -104,16 +104,10 @@ html {
 
     @media (max-width: 590px) {
       font-size: 1.2rem;
-      // padding: 0.4rem;
     }
     @media (max-width: 470px) {
       font-size: 0.9rem;
-      // padding: 0 0 0.2rem 0;
     }
-    // @media (max-width: 380px) {
-    //   font-size: 0.7rem;
-    //   padding: 0;
-    // }
   }
   &__text {
     font-size: 1.4rem;
@@ -122,21 +116,14 @@ html {
 
     @media (max-width: 690px) {
       font-size: 1.3rem;
-      // padding: 0.5rem 0 0.5rem 0;
     }
 
     @media (max-width: 590px) {
       font-size: 1.2rem;
-      // padding: 0;
     }
     @media (max-width: 470px) {
       font-size: 0.9rem;
-      // padding-bottom: 0.3rem;
     }
-    // @media (max-width: 380px) {
-    //   font-size: 0.7rem;
-    //   padding: 0;
-    // }
   }
 }
 
@@ -217,73 +204,92 @@ html {
       }
     }
   }
+
+  ////////////////////////////////////
+  // Section Silk Road home page image
+  ////////////////////////////////////
 }
-
-//////////////////////////////
-// Section Silk Road home page image
-//////////////////////////////
-.section-silkroad {
-  &__img {
-    height: 80%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-  }
-}
-
-//////////////////////////
-// Section cards home page
-//////////////////////////
-
 .section-card {
-  background: #bdc3c7; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #2c3e50,
-    #bdc3c7
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #2c3e50,
-    #bdc3c7
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: url('../img/silk-road-min.png');
+  min-height: calc(100vh - 8rem);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 8px;
-  text-align: center;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
 
+  @media (max-width: 990px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
   @media (max-width: 690px) {
     grid-template-columns: 1fr;
   }
-  @media (min-width: 1000px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
 
   &__body {
-    border: 3px solid #fff;
-    background: #434343;
     height: 350px;
+    text-align: center;
+    background: #434343;
+    width: 80%;
+    opacity: 0.6;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px 3px black;
+    transition: all 0.2s linear, transform 0.2s linear;
+
+    &:hover {
+      box-shadow: 10px 10px 12px 4px black;
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 990px) {
+      height: 300px;
+      width: 70%;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 690px) {
+      height: 280px;
+      width: 60%;
+    }
+    @media (max-width: 300px) {
+      height: 260px;
+      width: 90%;
+    }
   }
   &__img {
     height: 200px;
     width: 200px;
+
+    @media (max-width: 440px) {
+      height: 170px;
+      width: 170px;
+    }
   }
   &__title {
     text-shadow: $shadow-text;
     color: #bdbfc1;
+    padding-bottom: 0.3rem;
+    font-size: 0.9rem;
+
+    @media (max-width: 990px) {
+      display: none;
+    }
   }
   &__text {
     text-shadow: $shadow-text;
     color: #bdbfc1;
+    font-size: 0.9rem;
     padding-bottom: 1rem;
 
-    @media (max-width: 1000px) {
-      padding-bottom: 1.4rem;
+    @media (max-width: 990px) {
+      font-size: 0.8rem;
     }
-
-    @media (max-width: 690px) {
-      padding-bottom: 1.8rem;
+    @media (max-width: 440px) {
+      font-size: 0.6rem;
     }
   }
 }
@@ -291,7 +297,7 @@ html {
 /////////////////////////////////
 // About Me page Section about me
 /////////////////////////////////
-.section-aboutme {
+.container-aboutme {
   background: #f2994a; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to top,
@@ -303,8 +309,13 @@ html {
     #f2c94c,
     #f2994a
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.section-aboutme {
   display: grid;
   grid-template-columns: 1fr;
+  width: calc(100% - 5rem);
+  max-width: 50rem;
+  margin: 0 auto;
   text-align: justify;
   padding: 0 2rem;
   min-height: calc(100vh - 8rem);
@@ -349,7 +360,7 @@ html {
 
     text-shadow: $shadow-text;
     box-shadow: 2px 2px 5px 5px #283048;
-    transition: all 0.5s ease-out;
+    transition: all 0.5s linear;
 
     &:hover {
       color: #fff;
@@ -364,6 +375,7 @@ html {
         #859398,
         #283048
       ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      transform: scale(1.1);
     }
   }
 }
@@ -525,6 +537,7 @@ html {
     #434343,
     #000000
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: calc(100vh - 8rem);
 }
 .dogfight-tips {
   width: calc(100% - 10rem);
@@ -754,4 +767,45 @@ iframe {
 .countdown span {
   display: block;
   font-size: 1.5625;
+}
+
+.container-bfv {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.section-bfv {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  width: calc(100% - 5rem);
+  max-width: 50rem;
+  margin: 0 auto;
+
+  &__title {
+    padding-top: 1rem;
+    color: #fff;
+    text-align: center;
+
+    @media (max-width: 590px) {
+      font-size: 1.2rem;
+    }
+    @media (max-width: 490px) {
+      font-size: 1.1rem;
+    }
+  }
+  &__text {
+    color: #fff;
+    padding: 1rem 0 1rem 0;
+  }
 }

@@ -168,60 +168,102 @@ html {
         color: #fff;
         border-bottom: 1px solid #ffc107; }
 
-.section-silkroad__img {
-  height: 80%;
+.section-card {
+  background-image: url("../img/silk-road-min.png");
+  min-height: calc(100vh - 8rem);
   width: 100%;
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: center; }
-
-.section-card {
-  background: #bdc3c7;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left bottom, left top, from(#2c3e50), to(#bdc3c7));
-  background: linear-gradient(to top, #2c3e50, #bdc3c7);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-position: center;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 8px;
-  text-align: center; }
+  grid-template-columns: repeat(4, 1fr);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  @media (max-width: 990px) {
+    .section-card {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px; } }
   @media (max-width: 690px) {
     .section-card {
       grid-template-columns: 1fr; } }
-  @media (min-width: 1000px) {
-    .section-card {
-      grid-template-columns: repeat(4, 1fr); } }
   .section-card__body {
-    border: 3px solid #fff;
+    height: 350px;
+    text-align: center;
     background: #434343;
-    height: 350px; }
+    width: 80%;
+    opacity: 0.6;
+    margin: 0 auto;
+    border-radius: 10px;
+    -webkit-box-shadow: 8px 8px 10px 3px black;
+    box-shadow: 8px 8px 10px 3px black;
+    -webkit-transition: all 0.2s linear, -webkit-transform 0.2s linear;
+    transition: all 0.2s linear, -webkit-transform 0.2s linear;
+    transition: all 0.2s linear, transform 0.2s linear;
+    transition: all 0.2s linear, transform 0.2s linear, -webkit-transform 0.2s linear; }
+    .section-card__body:hover {
+      -webkit-box-shadow: 10px 10px 12px 4px black;
+      box-shadow: 10px 10px 12px 4px black;
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1); }
+    @media (max-width: 990px) {
+      .section-card__body {
+        height: 300px;
+        width: 70%;
+        margin-top: 1rem;
+        margin-bottom: 1rem; } }
+    @media (max-width: 690px) {
+      .section-card__body {
+        height: 280px;
+        width: 60%; } }
+    @media (max-width: 300px) {
+      .section-card__body {
+        height: 260px;
+        width: 90%; } }
   .section-card__img {
     height: 200px;
     width: 200px; }
+    @media (max-width: 440px) {
+      .section-card__img {
+        height: 170px;
+        width: 170px; } }
   .section-card__title {
     text-shadow: 1px 1px 0 #f9f572;
-    color: #bdbfc1; }
+    color: #bdbfc1;
+    padding-bottom: 0.3rem;
+    font-size: 0.9rem; }
+    @media (max-width: 990px) {
+      .section-card__title {
+        display: none; } }
   .section-card__text {
     text-shadow: 1px 1px 0 #f9f572;
     color: #bdbfc1;
+    font-size: 0.9rem;
     padding-bottom: 1rem; }
-    @media (max-width: 1000px) {
+    @media (max-width: 990px) {
       .section-card__text {
-        padding-bottom: 1.4rem; } }
-    @media (max-width: 690px) {
+        font-size: 0.8rem; } }
+    @media (max-width: 440px) {
       .section-card__text {
-        padding-bottom: 1.8rem; } }
+        font-size: 0.6rem; } }
 
-.section-aboutme {
+.container-aboutme {
   background: #f2994a;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(linear, left bottom, left top, from(#f2c94c), to(#f2994a));
   background: linear-gradient(to top, #f2c94c, #f2994a);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.section-aboutme {
   display: grid;
   grid-template-columns: 1fr;
+  width: calc(100% - 5rem);
+  max-width: 50rem;
+  margin: 0 auto;
   text-align: justify;
   padding: 0 2rem;
   min-height: calc(100vh - 8rem); }
@@ -256,8 +298,8 @@ html {
     text-shadow: 1px 1px 0 #f9f572;
     -webkit-box-shadow: 2px 2px 5px 5px #283048;
     box-shadow: 2px 2px 5px 5px #283048;
-    -webkit-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out; }
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear; }
     .section-aboutme__btnsec:hover {
       color: #fff;
       background: #283048;
@@ -265,7 +307,9 @@ html {
       /* Chrome 10-25, Safari 5.1-6 */
       background: -webkit-gradient(linear, left top, left bottom, from(#859398), to(#283048));
       background: linear-gradient(to bottom, #859398, #283048);
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1); }
 
 .button {
   background: #bdc3c7;
@@ -377,7 +421,8 @@ html {
   /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(linear, left bottom, left top, from(#434343), to(#000000));
   background: linear-gradient(to top, #434343, #000000);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: calc(100vh - 8rem); }
 
 .dogfight-tips {
   width: calc(100% - 10rem);
@@ -571,3 +616,43 @@ iframe {
 .countdown span {
   display: block;
   font-size: 1.5625; }
+
+.container-bfv {
+  background: #000000;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#434343), to(#000000));
+  background: linear-gradient(to right, #434343, #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.section-bfv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: justify;
+  width: calc(100% - 5rem);
+  max-width: 50rem;
+  margin: 0 auto; }
+  .section-bfv__title {
+    padding-top: 1rem;
+    color: #fff;
+    text-align: center; }
+    @media (max-width: 590px) {
+      .section-bfv__title {
+        font-size: 1.2rem; } }
+    @media (max-width: 490px) {
+      .section-bfv__title {
+        font-size: 1.1rem; } }
+  .section-bfv__text {
+    color: #fff;
+    padding: 1rem 0 1rem 0; }
