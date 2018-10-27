@@ -22,6 +22,9 @@ html {
     color: #fff;
     border-bottom: 1px solid #ffc107; }
 
+.active:hover {
+  opacity: 0.3; }
+
 .main-footer {
   height: 4rem;
   background: #283048;
@@ -204,11 +207,12 @@ html {
     transition: all 0.2s linear, -webkit-transform 0.2s linear;
     transition: all 0.2s linear, transform 0.2s linear;
     transition: all 0.2s linear, transform 0.2s linear, -webkit-transform 0.2s linear; }
-    .section-card__body:hover {
-      -webkit-box-shadow: 10px 10px 12px 4px black;
-      box-shadow: 10px 10px 12px 4px black;
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1); }
+    @media only screen and (min-width: 990px) {
+      .section-card__body:hover {
+        -webkit-box-shadow: 10px 10px 12px 4px black;
+        box-shadow: 10px 10px 12px 4px black;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1); } }
     @media (max-width: 990px) {
       .section-card__body {
         height: 300px;
@@ -298,18 +302,21 @@ html {
     text-shadow: 1px 1px 0 #f9f572;
     -webkit-box-shadow: 2px 2px 5px 5px #283048;
     box-shadow: 2px 2px 5px 5px #283048;
-    -webkit-transition: all 0.5s linear;
-    transition: all 0.5s linear; }
-    .section-aboutme__btnsec:hover {
-      color: #fff;
-      background: #283048;
-      /* fallback for old browsers */
-      /* Chrome 10-25, Safari 5.1-6 */
-      background: -webkit-gradient(linear, left top, left bottom, from(#859398), to(#283048));
-      background: linear-gradient(to bottom, #859398, #283048);
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1); }
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear; }
+    @media only screen and (min-width: 990px) {
+      .section-aboutme__btnsec:hover {
+        -webkit-box-shadow: 10px 10px 12px 4px black;
+        box-shadow: 10px 10px 12px 4px black;
+        color: #fff;
+        background: #283048;
+        /* fallback for old browsers */
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-gradient(linear, left top, left bottom, from(#859398), to(#283048));
+        background: linear-gradient(to bottom, #859398, #283048);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1); } }
 
 .button {
   background: #bdc3c7;
@@ -325,7 +332,13 @@ html {
   color: #fff;
   border: 0;
   width: 100%;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear; }
+  @media only screen and (min-width: 990px) {
+    .button:hover {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1); } }
   @media (max-width: 520px) {
     .button {
       font-size: 0.8rem; } }
