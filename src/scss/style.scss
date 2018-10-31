@@ -29,12 +29,6 @@ html {
   }
 }
 
-.active {
-  &:hover {
-    opacity: 0.3;
-  }
-}
-
 .main-footer {
   height: 4rem;
   background: #283048; /* fallback for old browsers */
@@ -187,6 +181,11 @@ html {
         flex-direction: column;
       }
     }
+
+    // ul li.active a {
+    //   background: #333;
+    // }
+
     &__item {
       display: inline-block;
       margin: 0 1.5rem 0 1.5rem;
@@ -706,6 +705,7 @@ iframe {
     }
   }
 }
+
 /////////////////////
 // BFV landing page
 /////////////////////

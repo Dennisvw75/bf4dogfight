@@ -22,9 +22,6 @@ html {
     color: #fff;
     border-bottom: 1px solid #ffc107; }
 
-.active:hover {
-  opacity: 0.3; }
-
 .main-footer {
   height: 4rem;
   background: #283048;
