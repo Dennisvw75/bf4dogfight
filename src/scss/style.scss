@@ -1,4 +1,5 @@
 $shadow-text: 1px 1px 0 #f9f572;
+$fade-time: 0.5s;
 * {
   margin: 0;
   padding: 0;
@@ -477,69 +478,97 @@ iframe {
 .section-landing {
   min-height: 100vh;
   background: url('../img/BF5-min.png') center/cover fixed no-repeat;
+  @media screen and (max-width: 450px) {
+    min-height: 80vh;
+  }
   &__title {
     padding-top: 6rem;
     text-align: center;
     font-size: 1.5rem;
-    color: #333;
+    text-shadow: $shadow-text;
     @media screen and (max-width: 450px) {
       font-size: 1.1rem;
     }
   }
+  &__par {
+    width: 18.75rem;
+    margin: 0 auto;
+    text-align: center;
+    background: transparent;
+    text-shadow: $shadow-text;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
 }
 
 .planes {
-  background: #bdc3c7;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #2c3e50, #bdc3c7);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #2c3e50, #bdc3c7);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  &__title {
-    font-size: 1.4rem;
-    border-bottom: 0.125rem solid #ffc107;
+  background: #000;
+}
+
+.container-planes {
+  max-width: 760px;
+  margin: auto; // border: #fff solid 3px;
+  background: #000;
+}
+
+.main-img img,
+.imgs img {
+  width: 100%;
+}
+
+@media screen and (max-width: 450px) {
+  .main-img img {
+    height: 400px;
   }
-  &__list {
-    list-style-type: none;
-    display: none;
+}
+
+.imgs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 4fr));
+  grid-gap: 5px;
+}
+
+.imgs img {
+  cursor: pointer;
+}
+
+/* Fade in animation */
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
-  &__item {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 1rem;
-    text-shadow: $shadow-text;
-  }
-  &__btn {
-    display: inline-block;
-    padding: 0.5rem 3rem; // border: 0.125rem solid #000;
-    margin: 0 0.3rem 0.3rem 0;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #000;
-    text-align: center;
-    border-radius: 0.6rem;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.5s linear;
-    &:hover {
-      background: #000;
-      color: #ffc107;
-      border-bottom: 1px solid #ffc107;
-    }
-    &:active {
-      color: #bbbbbb;
-      border-color: #bbbbbb;
-    }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn $fade-time ease-in 1 forwards;
+}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .imgs {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 .section-landing__container {
   height: 100vh;
   background: url('../img/plane-1.jpg') center/cover fixed no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 450px) {
+    min-height: 80vh;
+  }
+  .section-landing__paragraph {
+    width: 18.75rem;
+    background: transparent;
+    text-shadow: $shadow-text;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
 }
