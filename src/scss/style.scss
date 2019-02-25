@@ -177,7 +177,7 @@ html {
 }
 
 .section-card {
-  background-image: url('../img/silk-road-min.png');
+  background-image: url('../image-min/silk-road-min.png');
   min-height: calc(100vh - 8rem);
   width: 100%;
   background-repeat: no-repeat;
@@ -477,9 +477,9 @@ iframe {
 /////////////////////
 .section-landing {
   min-height: 100vh;
-  background: url('../img/BF5-min.png') center/cover fixed no-repeat;
+  background: url('../image-min/BF5-min.png') center/cover fixed no-repeat;
   @media screen and (max-width: 450px) {
-    min-height: 80vh;
+    // background-color: #859398;
   }
   &__title {
     padding-top: 6rem;
@@ -555,7 +555,7 @@ iframe {
 
 .section-landing__container {
   height: 100vh;
-  background: url('../img/plane-1.jpg') center/cover fixed no-repeat;
+  background: url('../image-min/plane-1.jpg') center/cover fixed no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
