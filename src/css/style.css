@@ -447,10 +447,15 @@ iframe {
 .section-landing {
   min-height: 100vh;
   background: url("../image-min/BF5-min.png") center/cover fixed no-repeat; }
+  @media screen and (max-width: 450px) {
+    .section-landing {
+      background: url("../image-min/BF5-min.png");
+      background-position: center;
+      background-size: cover; } }
   .section-landing__title {
     padding-top: 6rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     text-shadow: 1px 1px 0 #f9f572; }
     @media screen and (max-width: 450px) {
       .section-landing__title {
@@ -461,7 +466,7 @@ iframe {
     text-align: center;
     background: transparent;
     text-shadow: 1px 1px 0 #f9f572;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-top: 1rem; }
 
 .planes {
@@ -524,11 +529,17 @@ iframe {
   align-items: center; }
   @media screen and (max-width: 450px) {
     .section-landing__container {
-      min-height: 80vh; } }
+      background: url("../image-min/plane-1.jpg");
+      background-position: center;
+      background-size: cover; } }
   .section-landing__container .section-landing__paragraph {
     width: 18.75rem;
     background: transparent;
     text-shadow: 1px 1px 0 #f9f572;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-align: center;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    letter-spacing: 2px; }
+    @media screen and (max-width: 450px) {
+      .section-landing__container .section-landing__paragraph {
+        font-size: 1rem; } }

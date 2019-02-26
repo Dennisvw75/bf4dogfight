@@ -52,7 +52,9 @@ gulp.task('serve', ['sass'], function() {
 
   gulp.watch(['src/scss/*.scss'], ['sass']);
   gulp.watch('src/*.html').on('change', browserSync.reload);
+  gulp.watch(['src/css/style.css'], ['minify-css']);
+  gulp.watch(['src/img/*'], ['imageMin']);
 });
 
 // Default Task
-gulp.task('default', ['serve', 'imageMin', 'sass', 'minify-css']);
+gulp.task('default', ['serve', 'sass', 'minify-css', 'imageMin']);
