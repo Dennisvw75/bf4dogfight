@@ -4,11 +4,12 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const cleanCSS = require('gulp-clean-css');
+const babel = require('gulp-babel');
 
 // Compress images
 gulp.task('imageMin', function() {
   return gulp
-    .src('src/img/*')
+    .src('img/*')
     .pipe(
       imagemin({
         progressive: true
@@ -28,20 +29,32 @@ gulp.task('sass', function() {
         cascade: false
       })
     )
-    .pipe(gulp.dest('src/css'))
+    .pipe(gulp.dest('css'))
     .pipe(browserSync.stream());
 });
 
 // Compress CSS
 gulp.task('minify-css', function() {
   return gulp
-    .src('src/css/style.css')
+    .src('css/style.css')
     .pipe(
       cleanCSS({
         compatibility: '*'
       })
     )
     .pipe(gulp.dest('src/css-final'));
+});
+
+// Compile JS to es2015
+gulp.task('es6', function() {
+  return gulp
+    .src('js/main.js')
+    .pipe(
+      babel({
+        presets: ['@babel/preset-env']
+      })
+    )
+    .pipe(gulp.dest('src/js-final'));
 });
 
 // Watch Sass & Serve
@@ -52,9 +65,10 @@ gulp.task('serve', ['sass'], function() {
 
   gulp.watch(['src/scss/*.scss'], ['sass']);
   gulp.watch('src/*.html').on('change', browserSync.reload);
-  gulp.watch(['src/css/style.css'], ['minify-css']);
-  gulp.watch(['src/img/*'], ['imageMin']);
+  gulp.watch(['css/style.css'], ['minify-css']);
+  gulp.watch(['img/*'], ['imageMin']);
+  gulp.watch(['js/main.js'], ['es6']);
 });
 
 // Default Task
-gulp.task('default', ['serve', 'sass', 'minify-css', 'imageMin']);
+gulp.task('default', ['serve', 'sass', 'minify-css', 'imageMin', 'es6']);
