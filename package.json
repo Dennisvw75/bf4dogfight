@@ -1,12 +1,12 @@
 {
-  "name": "sass_starter_pack",
+  "name": "Dogfight BF4",
   "version": "1.0.0",
-  "description": "Starter pack using gulp",
+  "description": "Dogfighting BF4",
   "main": "index.js",
   "scripts": {
     "start": "gulp"
   },
-  "author": "Brad Traversy",
+  "author": "Dennis van Wetering",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.11.0",
