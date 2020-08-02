@@ -9,16 +9,16 @@
   "author": "Brad Traversy",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
     "babel-preset-es2015": "^6.24.1",
-    "browser-sync": "^2.26.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.0.0",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-sass": "^3.1.0"
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0"
   },
   "dependencies": {}
 }
